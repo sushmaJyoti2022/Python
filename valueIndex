@@ -1,0 +1,16 @@
+def find_indices_and_count(lst, value):
+    indices = []  
+    count = 0    
+    for i, item in enumerate(lst):
+        if item == value:
+            indices.append(i)
+            count += 1
+    return indices, count
+my_list = [1, 2, 3, 4, 2, 5, 2, 6]
+find_value = 3
+indices, count = find_indices_and_count(my_list, find_value)
+if count > 0:
+    print(f"The value {find_value} is found at the indices: {indices}")
+    print(f"The value {find_value} appears {count} times in the list.")
+else:
+    print(f"The value {find_value} is not found in the list.")
